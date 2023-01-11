@@ -22,14 +22,54 @@ export default {
     AddData,
     WeatherCities,
   },
+  provide() {
+    return {
+      stations: this.stations,
+      addStation: this.addStation,
+    };
+  },
   data() {
     return {
       selectedComponent: "weather-cities",
+      stations: [
+        {
+          city: "Kranj",
+          country: "Slovenia",
+          temperature: 15,
+          humidity: 53,
+          description: "Sunny",
+        },
+        {
+          city: "Ljubljana",
+          country: "Slovenia",
+          temperature: 16,
+          humidity: 55,
+          description: "Cloudy",
+        },
+        {
+          city: "Koper",
+          country: "Slovenia",
+          temperature: 22,
+          humidity: 30,
+          description: "Sunny",
+        },
+      ],
     };
   },
   methods: {
     setSelectedComponents(component) {
       this.selectedComponent = component;
+    },
+    addStation(city, country, temperature, humidity, description) {
+      const newStation = {
+        city: city,
+        country: country,
+        temperature: temperature,
+        humidity: humidity,
+        description: description,
+      };
+      this.stations.unshift(newStation);
+      this.selectedComponent = "weather-cities";
     },
   },
   computed: {

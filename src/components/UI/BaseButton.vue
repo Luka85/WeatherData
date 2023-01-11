@@ -5,7 +5,7 @@
 </template>
 <script>
 export default {
-  props: ["mode"],
+  props: ["mode", "type"],
 };
 </script>
 <style scoped>
@@ -49,7 +49,6 @@ export default {
   padding: 0.5rem 1rem;
   border: 1px solid transparent;
   cursor: pointer;
-  border-radius: 0.3rem 0 0 0.3rem;
 }
 
 .flat {
@@ -58,7 +57,7 @@ export default {
   background-color: #fff;
   color: #2e635e;
   border: 1px solid #2e635e;
-  border-radius: 0 0.3rem 0.3rem 0;
+
   cursor: pointer;
 }
 </style>

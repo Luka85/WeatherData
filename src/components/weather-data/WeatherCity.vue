@@ -6,8 +6,8 @@
           <h3>{{ city }}, {{ country }}</h3>
           <h4>{{ temperature }}°C</h4>
           <base-button mode="view">View details</base-button>
-          <!-- <p>Humidity: {{ humidity }}</p>
-          <p>{{ description }}</p> -->
+          <p>Humidity: {{ humidity }}</p>
+          <p>{{ description }}</p>
         </header>
         <div>
           <base-button mode="delete">Delete</base-button>
@@ -19,7 +19,7 @@
 
 <script>
 export default {
-  props: ["city", "country", "temperature", "humidity", "description", "id"],
+  props: ["city", "country", "temperature", "humidity", "description"],
 };
 </script>
 
@@ -28,6 +28,7 @@ h3,
 h4 {
   margin-bottom: 0.5rem;
   font-weight: 400;
+  color: #2e635e;
 }
 h3 {
   font-size: 1.1rem;
