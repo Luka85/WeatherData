@@ -1,5 +1,7 @@
 # WeatherVue
 
+Practice project where I deepen my knowledge in Vue components, provide/inject, emits, props and other Vue core features
+
 This template should help get you started developing with Vue 3 in Vite.
 
 ## Recommended IDE Setup
