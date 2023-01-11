@@ -20,6 +20,7 @@ header {
 
 h1 {
   color: #fff;
+
   font-weight: 200;
 }
 </style>
