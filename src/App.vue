@@ -1,14 +1,14 @@
 <template>
   <the-header title="Weather Data"></the-header>
-  <weather-cities></weather-cities>
+  <weather-tab></weather-tab>
 </template>
 <script>
 import TheHeader from "./components/layout/TheHeader.vue";
-import WeatherCities from "./components/weather-data/WeatherCities.vue";
+import WeatherTab from "./components/weather-data/WeatherTab.vue";
 export default {
   components: {
     TheHeader,
-    WeatherCities,
+    WeatherTab,
   },
   data() {
     return {};
