@@ -60,4 +60,16 @@ export default {
 
   cursor: pointer;
 }
+
+@media (max-width: 360px) {
+  button {
+    font-size: 0.6rem;
+  }
+  .active {
+    padding: 0.5rem 0.3rem;
+  }
+  .flat {
+    padding: 0.5rem 0.3rem;
+  }
+}
 </style>
