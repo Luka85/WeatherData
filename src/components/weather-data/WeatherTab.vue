@@ -71,6 +71,9 @@ export default {
       this.stations.unshift(newStation);
       this.selectedComponent = "weather-cities";
     },
+    deleteStation(id) {
+      this.stations.
+    },
   },
   computed: {
     setWeatherCitiesModeButton() {

@@ -57,6 +57,17 @@ import BaseButton from "../UI/BaseButton.vue";
       <base-button mode="view" type="submit">Submit Data</base-button>
     </form>
   </base-card>
+
+  <base-dialog v-if="isInvalid" @close="confirmError">
+    <template #header>
+      <h3>Invalid Input</h3>
+    </template>
+    <template #default class="description">
+      <p>You entered invalid data!</p>
+      <p>For each input you must enter some data.</p>
+      <base-button mode="view" @click="confirmError">Okay</base-button>
+    </template>
+  </base-dialog>
 </template>
 
 <script>
@@ -81,7 +92,7 @@ export default {
         this.humidity === null ||
         this.description === ""
       ) {
-        console.log("Invalid");
+        this.isInvalid = true;
       } else {
         console.log(this.stations);
         this.addStation(
@@ -92,6 +103,9 @@ export default {
           this.description
         );
       }
+    },
+    confirmError() {
+      this.isInvalid = false;
     },
   },
 };
@@ -113,5 +127,17 @@ input {
 label {
   margin-bottom: 0.1rem;
   font-size: 0.9rem;
+}
+h3 {
+  color: #fff;
+  font-weight: 200;
+}
+
+p {
+  margin-bottom: 0.5rem;
+}
+
+.description {
+  margin: 0 1rem;
 }
 </style>
