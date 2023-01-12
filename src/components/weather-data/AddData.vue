@@ -1,5 +1,3 @@
-<!-- import BaseButton from "../UI/BaseButton.vue"; -->
-
 <template>
   <base-card>
     <form @submit.prevent="submitForm()">

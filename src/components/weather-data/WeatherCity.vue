@@ -9,7 +9,7 @@
             >View details</base-button
           >
           <div v-if="isVisible">
-            <p>Humidity: {{ humidity }}</p>
+            <p>Humidity: {{ humidity }}%</p>
             <p>{{ description }}</p>
           </div>
         </header>

@@ -5,7 +5,7 @@
 </template>
 <script>
 export default {
-  props: ["mode", "type"],
+  props: ["mode"],
 };
 </script>
 <style scoped>

@@ -1,5 +1,3 @@
-import { slotFlagsText } from "@vue/shared";
-
 <template>
   <div>
     <slot></slot>
