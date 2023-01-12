@@ -5,12 +5,18 @@
         <header>
           <h3>{{ city }}, {{ country }}</h3>
           <h4>{{ temperature }}°C</h4>
-          <base-button mode="view">View details</base-button>
-          <p>Humidity: {{ humidity }}</p>
-          <p>{{ description }}</p>
+          <base-button mode="view" @click="viewDetails"
+            >View details</base-button
+          >
+          <div v-if="isVisible">
+            <p>Humidity: {{ humidity }}</p>
+            <p>{{ description }}</p>
+          </div>
         </header>
         <div>
-          <base-button mode="delete">Delete</base-button>
+          <base-button mode="delete" @click="deleteStation(id)"
+            >Delete</base-button
+          >
         </div>
       </template>
     </base-card>
@@ -19,7 +25,19 @@
 
 <script>
 export default {
-  props: ["city", "country", "temperature", "humidity", "description"],
+  props: ["city", "country", "temperature", "humidity", "description", "id"],
+  inject: ["deleteStation"],
+  data() {
+    return {
+      isVisible: false,
+    };
+  },
+
+  methods: {
+    viewDetails() {
+      this.isVisible = !this.isVisible;
+    },
+  },
 };
 </script>
 
@@ -35,5 +53,12 @@ h3 {
 }
 h4 {
   font-size: 1.8rem;
+}
+
+p {
+  color: #2e635e;
+}
+div {
+  margin-top: 1rem;
 }
 </style>

@@ -11,7 +11,9 @@
       >Add Weather Data</base-button
     >
   </base-card>
-  <component :is="selectedComponent"></component>
+  <keep-alive>
+    <component :is="selectedComponent"></component>
+  </keep-alive>
 </template>
 
 <script>
@@ -26,6 +28,8 @@ export default {
     return {
       stations: this.stations,
       addStation: this.addStation,
+      deleteStation: this.deleteStation,
+      id: this.id,
     };
   },
   data() {
@@ -72,7 +76,7 @@ export default {
       this.selectedComponent = "weather-cities";
     },
     deleteStation(id) {
-      this.stations.
+      this.stations.splice(id, 1);
     },
   },
   computed: {

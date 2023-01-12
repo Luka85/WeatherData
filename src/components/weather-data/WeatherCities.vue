@@ -19,6 +19,6 @@ export default {
   components: {
     WeatherCity,
   },
-  inject: ["stations"],
+  inject: ["stations", "id"],
 };
 </script>

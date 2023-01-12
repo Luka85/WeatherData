@@ -1,13 +1,15 @@
 <template>
-  <div @click="closeError"></div>
-  <dialog open>
-    <header>
-      <slot name="header"></slot>
-    </header>
-    <section>
-      <slot></slot>
-    </section>
-  </dialog>
+  <teleport to="body">
+    <div @click="closeError"></div>
+    <dialog open>
+      <header>
+        <slot name="header"></slot>
+      </header>
+      <section>
+        <slot></slot>
+      </section>
+    </dialog>
+  </teleport>
 </template>
 
 <script>
@@ -24,7 +26,7 @@ export default {
 <style scoped>
 dialog {
   position: absolute;
-  top: 50%;
+  top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
   display: flex;

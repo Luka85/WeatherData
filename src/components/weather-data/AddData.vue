@@ -1,4 +1,4 @@
-import BaseButton from "../UI/BaseButton.vue";
+<!-- import BaseButton from "../UI/BaseButton.vue"; -->
 
 <template>
   <base-card>
@@ -102,6 +102,11 @@ export default {
           this.humidity,
           this.description
         );
+        this.city = "";
+        this.country = "";
+        this.temperature = null;
+        this.humidity = null;
+        this.description = "";
       }
     },
     confirmError() {
